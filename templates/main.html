@@ -1,0 +1,36 @@
+{% load static from staticfiles  %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Main Page</title>
+        <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+        <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            html, body, div{
+                height: 100%;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    
+    <body style="background-color: #deedff">
+    
+        <header>
+            <div class="navbar-fixed">
+                <nav class="navbar blue darken-2">
+                    <div class="nav-wrapper">
+                        <!-- <a href="#" class="brand-logo white-text center">Welcome Admin <img src="{% static 'img/icon.png' %}" rel="" height="30px"></a> -->
+                        <a href="{% url 'logout' %}" class="light-blue-text text-darken-3 right btn white" style="font-weight:bold;margin-right:30px;margin-top: 15px">Log Out</a>
+                        <a href="#" data-target="sidenav-left" class="sidenav-trigger left">
+                            <i class="material-icons black-text">menu</i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+      </body>
