@@ -4,33 +4,78 @@
     <head>
         <meta charset="UTF-8">
         <title>Main Page</title>
-        <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
-        <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
-        <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bot.css' %}">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel='stylesheet prefetch' href='{% static 'css/reset.min.css' %}'>
+        <link rel='stylesheet prefetch' href='{% static 'css/font-awesome.min.css' %}'>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <style>
-            html, body, div{
-                height: 100%;
-            }
-            html {
-                scroll-behavior: smooth;
-            }
-        </style>
+
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'js/hoy3lrg.js' %}"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
     </head>
     
     <body style="background-color: #deedff">
-    
-        <header>
-            <div class="navbar-fixed">
-                <nav class="navbar blue darken-2">
-                    <div class="nav-wrapper">
-                        <!-- <a href="#" class="brand-logo white-text center">Welcome Admin <img src="{% static 'img/icon.png' %}" rel="" height="30px"></a> -->
-                        <a href="{% url 'logout' %}" class="light-blue-text text-darken-3 right btn white" style="font-weight:bold;margin-right:30px;margin-top: 15px">Log Out</a>
-                        <a href="#" data-target="sidenav-left" class="sidenav-trigger left">
-                            <i class="material-icons black-text">menu</i>
-                        </a>
+        <div id="frame">
+            <div id="sidepanel">
+                <div id="profile">
+                    <div class="wrap">
+                        <img id="profile-img" src="https://avatars3.githubusercontent.com/u/30492527?s=460&v=4" class="online" alt="" />
+                        <p>Pema Grg</p>
                     </div>
-                </nav>
+                </div>
+                <div id="search">
+                    <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+                    <input type="text" placeholder="Search contacts..." />
+                </div>
+                <div id="contacts">
+                    <ul>
+                        <li class="contact">
+                            <div class="wrap">
+                                <span class="contact-status online"></span>
+                                <img src="https://miro.medium.com/max/327/1*paQ7E6f2VyTKXHpR-aViFg.png" alt="" />
+                                <div class="meta">
+                                    <p class="name">AIML Bot</p>
+                                    <p class="preview">Assistant Bot</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="bottom-bar">
+                    <button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span></button>
+                    <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
+                </div>
             </div>
-        </header>
-      </body>
+            <div class="content">
+                <div class="contact-profile">
+                    <img src="https://miro.medium.com/max/327/1*paQ7E6f2VyTKXHpR-aViFg.png" alt="" />
+                    <p>AIML BOT</p>
+                </div>
+                <div class="messages">
+                    <ul>
+                        <li class="sent">
+                            <img src="https://avatars3.githubusercontent.com/u/30492527?s=460&v=4" alt="" />
+                            <p>Hello am you.. Please write ur message to continue the chat.</p>
+                        </li>
+                        <li class="replies">
+                            <img src="https://miro.medium.com/max/327/1*paQ7E6f2VyTKXHpR-aViFg.png" alt="" />
+                            <p>Hello! I am the AIML bot!</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="message-input">
+                    <div class="wrap">
+                        <div id="userInput">
+                            <input id="textInput" type="text" name="msg" placeholder="Write your message..." />
+                            <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                            <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

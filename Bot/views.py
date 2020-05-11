@@ -4,12 +4,10 @@ from django.shortcuts import render
 
 
 def bot_reply(request):
+    # save patient reply in db
+    # generate bot reply
+    # save bot reply in db
     return "Hakunama tata"
-
-
-def patient_reply(request):
-    # save in db
-    return None
 
 
 def export_chat(request):
