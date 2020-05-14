@@ -10,9 +10,9 @@ urlpatterns = [
 	url(r'admin/', admin.site.urls),
 	url(r'accounts/', include('django.contrib.auth.urls')),
 	url(r'^logout/', views.logout_view, name='logout'),
-	url(r'^main/', views.main,name='main'),
+	url(r'^main/', views.main, name='main'),
+	url(r'^bot/', include('Bot.urls')),
 	url(r'^', RedirectView.as_view(pattern_name='main', permanent=False)),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
-# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
